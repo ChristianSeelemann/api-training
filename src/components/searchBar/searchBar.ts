@@ -1,7 +1,7 @@
 import { createElement } from '../../utils/functions/createElement';
 import styles from './searchBar.module.css';
 
-export function searchBar() {
+export function searchBar(): HTMLElement {
   const searchContainer = createElement('section', {
     className: styles.searchBar,
     childElements: [
