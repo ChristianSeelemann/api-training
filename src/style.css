@@ -6,8 +6,15 @@
   box-sizing: border-box;
 }
 
-#app {
+body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.gamelist-container {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
