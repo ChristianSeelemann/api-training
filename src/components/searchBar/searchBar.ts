@@ -15,30 +15,36 @@ async function fireInitFetch() {
 
 fireInitFetch();
 
+let timer: number | undefined;
+
 const searchElement = createElement('input', {
   placeholder: 'Search your favorite Game...',
   className: 'search__input',
-  oninput: async () => {
-    const searchQuery = searchElement.value;
-    const searchContainer = document.querySelector('.gamelist-container');
+  onkeyup: async () => {
+    clearTimeout(timer);
 
-    if (searchQuery === '') {
-      if (searchContainer) {
-        searchContainer.innerHTML = '';
-      }
-      fireInitFetch();
-    } else {
-      const response = await fetchAPIFilter();
-      const gamesFiltered = response.filter((game) =>
-        game.title.match(searchQuery)
-      );
-      const filteredList = gamesFiltered.map((Game) => gameList(Game));
+    timer = setTimeout(async () => {
+      const searchQuery = searchElement.value;
+      const searchContainer = document.querySelector('.gamelist-container');
 
-      if (searchContainer) {
-        searchContainer.innerHTML = '';
-        searchContainer.append(...filteredList);
+      if (searchQuery === '') {
+        if (searchContainer) {
+          searchContainer.innerHTML = '';
+        }
+        fireInitFetch();
+      } else {
+        const response = await fetchAPIFilter();
+        const gamesFiltered = response.filter((game) =>
+          game.title.match(searchQuery)
+        );
+        const filteredList = gamesFiltered.map((Game) => gameList(Game));
+
+        if (searchContainer) {
+          searchContainer.innerHTML = '';
+          searchContainer.append(...filteredList);
+        }
       }
-    }
+    }, 750);
   },
 });
 
