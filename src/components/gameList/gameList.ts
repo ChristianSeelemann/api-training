@@ -1,7 +1,8 @@
 import styles from '../gameList/gameList.module.css';
 import { createElement } from '../../utils/functions/createElement';
+import type { Games } from '../../types';
 
-export function gameList(single): HTMLElement {
+export function gameList(single: Games): HTMLElement {
   const descriptionInput = single.short_description;
   const descriptionOutput = descriptionInput.slice(0, 50) + '...';
 
@@ -10,6 +11,8 @@ export function gameList(single): HTMLElement {
       return '<i class="fab fa-xbox"></i>';
     } else if (single.platform === 'Browser') {
       return '<i class="fas fa-window-restore"></i>';
+    } else {
+      return '';
     }
   };
   const platformContainer = createElement('div', {
