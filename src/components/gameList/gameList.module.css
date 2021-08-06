@@ -58,6 +58,8 @@
 .description {
   margin-bottom: 2rem;
   color: rgb(230, 224, 240);
+  height: 3rem;
+  overflow: hidden;
 }
 
 .additionals {

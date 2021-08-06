@@ -1,10 +1,20 @@
 import styles from '../gameList/gameList.module.css';
 import { createElement } from '../../utils/functions/createElement';
 
-export function gameList(): HTMLElement {
-  const descriptionInput =
-    'A browser-based 3D space-combat MMO with a massive playerbase! A browser-based 3D space-combat MMO with a massive playerbase! A browser-based 3D space-combat MMO with a massive playerbase!';
-  const descriptionOutput = descriptionInput.slice(0, 80) + '...';
+export function gameList(single): HTMLElement {
+  const descriptionInput = single.short_description;
+  const descriptionOutput = descriptionInput.slice(0, 50) + '...';
+
+  const platform = () => {
+    if (single.platform === 'PC (Windows)') {
+      return '<i class="fab fa-xbox"></i>';
+    } else if (single.platform === 'Browser') {
+      return '<i class="fas fa-window-restore"></i>';
+    }
+  };
+  const platformContainer = createElement('div', {
+    innerHTML: platform(),
+  });
 
   const gameCard = createElement('article', {
     className: styles.card,
@@ -14,11 +24,11 @@ export function gameList(): HTMLElement {
         childElements: [
           createElement('img', {
             className: styles.img,
-            src: 'https://www.freetogame.com/g/1/thumbnail.jpg',
+            src: single.thumbnail,
           }),
           createElement('div', {
             className: styles.genre,
-            innerText: 'MMORPG',
+            innerText: single.genre,
           }),
         ],
       }),
@@ -27,7 +37,7 @@ export function gameList(): HTMLElement {
         childElements: [
           createElement('h2', {
             className: styles.title,
-            innerText: 'Dark Orbit Reloaded Dark Orbit Reloaded',
+            innerText: single.title,
           }),
           createElement('p', {
             className: styles.description,
@@ -38,11 +48,9 @@ export function gameList(): HTMLElement {
             childElements: [
               createElement('div', {
                 className: styles.publisher,
-                innerText: 'Bigpoint | Digital Extremes',
+                innerText: single.developer,
               }),
-              createElement('div', {
-                innerHTML: '<i class="fab fa-xbox"></i>',
-              }),
+              platformContainer,
             ],
           }),
         ],
