@@ -28,7 +28,7 @@ const searchElement = createElement('input', {
       }
       fireInitFetch();
     } else {
-      const response = await fetchAPIFilter(searchQuery);
+      const response = await fetchAPIFilter();
       const gamesFiltered = response.filter((game) =>
         game.title.match(searchQuery)
       );
@@ -42,7 +42,7 @@ const searchElement = createElement('input', {
   },
 });
 
-export function searchBar(searchString: string): HTMLElement {
+export function searchBar(): HTMLElement {
   const searchContainer = createElement('section', {
     className: styles.searchBar,
     childElements: [

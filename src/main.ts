@@ -16,7 +16,7 @@ const gameContainer = createElement('main', {
   className: 'gamelist-container',
 });
 
-const searchBarContainer = searchBar('searchValue');
+const searchBarContainer = searchBar();
 
 const output = createElement('div', {
   className: 'page',

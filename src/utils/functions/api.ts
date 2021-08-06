@@ -1,4 +1,4 @@
-import type { Games, Game } from '../../types';
+import type { Games } from '../../types';
 
 export async function fetchAPI(): Promise<Games[]> {
   const response = await fetch(
@@ -8,7 +8,7 @@ export async function fetchAPI(): Promise<Games[]> {
   return response.json();
 }
 
-export async function fetchAPIFilter(searchQuery: string): Promise<Games[]> {
+export async function fetchAPIFilter(): Promise<Games[]> {
   const response = await fetch(
     'https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/games'
   );
