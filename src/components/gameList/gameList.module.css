@@ -1,3 +1,70 @@
-.placeholder {
-  color: red;
+.card {
+  color: #fff;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.22);
+}
+
+.top {
+  position: relative;
+  display: flex;
+}
+
+.genre {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: rgb(111, 50, 255);
+  border-radius: 0.3rem;
+  padding: 0.47rem 0.75rem 0.4rem 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.img {
+  width: 100%;
+  border-radius: 0.75rem 0.75rem 0 0;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+.info {
+  background-color: rgb(49, 43, 61);
+  border-radius: 1.5rem 1.5rem 0.75rem 0.75rem;
+  padding: 2rem 1.5rem;
+  margin-top: -1.3rem;
+  z-index: 1;
+}
+
+.title {
+  padding-bottom: 1.5rem;
+  letter-spacing: 0.3px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.description {
+  margin-bottom: 2rem;
+  color: rgb(230, 224, 240);
+}
+
+.additionals {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.publisher {
+  color: rgb(191, 181, 209);
 }
