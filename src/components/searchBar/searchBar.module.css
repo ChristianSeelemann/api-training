@@ -10,8 +10,8 @@
   width: 20rem;
   padding: 1rem;
   font-size: 1rem;
-  background-color: #423656;
-  color: #efe6ff;
+  background-color: var(--clr-bg-light);
+  color: #d7c9ee;
   font-weight: bold;
   letter-spacing: 0.2px;
   border: none;
@@ -24,7 +24,7 @@
 }
 
 .search__input::placeholder {
-  color: var(--clr-bg);
+  color: #6f5bad;
 }
 
 @media (max-width: 400px) {

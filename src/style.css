@@ -7,7 +7,8 @@
 }
 
 :root {
-  --clr-bg: rgb(23, 20, 31);
+  --clr-bg: #211e2b;
+  --clr-bg-light: #31294c;
 }
 
 body {
