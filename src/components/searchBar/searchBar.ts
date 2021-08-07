@@ -34,9 +34,8 @@ const searchElement = createElement('input', {
         fireInitFetch();
       } else {
         const response = await fetchAPIFilter();
-        const gamesFiltered = response.filter((game) =>
-          game.title.match(searchQuery)
-        );
+        const reg = new RegExp(searchQuery, 'ig');
+        const gamesFiltered = response.filter((game) => game.title.match(reg));
         const filteredList = gamesFiltered.map((Game) => gameList(Game));
 
         if (searchContainer) {
