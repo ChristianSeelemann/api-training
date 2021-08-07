@@ -8,7 +8,7 @@
 
 .search__input {
   width: 20rem;
-  padding: 1rem;
+  padding: 1.1rem 1rem 1rem 1rem;
   font-size: 1rem;
   background-color: var(--clr-bg-light);
   color: #d7c9ee;
