@@ -1,8 +1,28 @@
 .searchBar {
-  background-color: rgb(23, 20, 31);
   padding: 1rem;
   color: #fff;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.search__input {
+  width: 20rem;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: #423656;
+  color: #efe6ff;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.22);
+}
+
+.search__input:focus-visible {
+  outline: none;
+}
+
+.search__input::placeholder {
+  color: var(--clr-bg);
 }

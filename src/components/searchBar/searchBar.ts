@@ -19,7 +19,7 @@ let timer: number | undefined;
 
 const searchElement = createElement('input', {
   placeholder: 'Search your favorite Game...',
-  className: 'search__input',
+  className: styles.search__input,
   onkeyup: async () => {
     clearTimeout(timer);
 
@@ -51,9 +51,6 @@ export function searchBar(): HTMLElement {
   const searchContainer = createElement('section', {
     className: styles.searchBar,
     childElements: [
-      createElement('div', {
-        innerText: 'Filter',
-      }),
       createElement('div', {
         childElements: [searchElement],
       }),

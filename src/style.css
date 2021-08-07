@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --clr-bg: rgb(23, 20, 31);
+}
+
 body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,7 +19,12 @@ body {
 .gamelist-container {
   display: grid;
   grid-gap: 1rem;
-  padding: 1rem;
+  padding: 0 5rem 4rem 5rem;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  background-color: rgb(23, 20, 31);
+  background-color: var(--clr-bg);
+}
+
+.filter-container {
+  background-color: var(--clr-bg);
+  padding: 5rem 0 4rem 0;
 }

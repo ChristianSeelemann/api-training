@@ -8,7 +8,10 @@ const gameContainer = createElement('main', {
   className: 'gamelist-container',
 });
 
-const searchBarContainer = searchBar();
+const searchBarContainer = createElement('section', {
+  className: 'filter-container',
+  childElements: [searchBar()],
+});
 
 const output = createElement('div', {
   className: 'page',
