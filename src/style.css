@@ -28,3 +28,16 @@ body {
   background-color: var(--clr-bg);
   padding: 5rem 0 4rem 0;
 }
+
+@media (min-width: 770px) and (max-width: 1200px) {
+  .gamelist-container {
+    padding: 0 3rem 4rem 3rem;
+  }
+}
+
+@media (min-width: 0) and (max-width: 769px) {
+  .gamelist-container {
+    padding: 0 2rem 4rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 100%));
+  }
+}
