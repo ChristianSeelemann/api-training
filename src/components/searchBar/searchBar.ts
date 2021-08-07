@@ -38,7 +38,11 @@ const searchElement = createElement('input', {
 
         if (searchContainer) {
           searchContainer.innerHTML = '';
-          searchContainer.append(...filteredList);
+          if (filteredList.length === 0) {
+            searchContainer.innerHTML = `<div class="${styles.notFound}">Oops... maybe try another search?</div>`;
+          } else {
+            searchContainer.append(...filteredList);
+          }
         }
       }
     }, 750);

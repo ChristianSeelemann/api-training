@@ -27,6 +27,14 @@
   color: #6f5bad;
 }
 
+.notFound {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+}
+
 @media (max-width: 400px) {
   .search__input {
     width: 100%;
