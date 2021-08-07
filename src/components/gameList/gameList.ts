@@ -8,8 +8,8 @@ export function gameList(single: Games): HTMLElement {
 
   const platform = () => {
     if (single.platform === 'PC (Windows)') {
-      return '<i class="fab fa-xbox"></i>';
-    } else if (single.platform === 'Browser') {
+      return '<i class="fab fa-windows"></i>';
+    } else if (single.platform === 'Web Browser') {
       return '<i class="fas fa-window-restore"></i>';
     } else {
       return '';

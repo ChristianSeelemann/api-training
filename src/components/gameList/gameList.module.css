@@ -20,7 +20,12 @@
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  background-color: rgb(65, 14, 184);
+  background: rgb(82, 14, 184);
+  background: linear-gradient(
+    321deg,
+    rgba(82, 14, 184, 1) 0%,
+    rgba(67, 24, 167, 1) 100%
+  );
   border-radius: 0.3rem;
   padding: 0.47rem 0.75rem 0.4rem 0.75rem;
   font-weight: bold;
