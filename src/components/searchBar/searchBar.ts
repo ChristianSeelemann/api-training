@@ -9,6 +9,7 @@ async function fireInitFetch() {
   const games = smallGames.map((Game) => gameList(Game));
   const searchContainer = document.querySelector('.gamelist-container');
   if (searchContainer !== null) {
+    searchContainer.innerHTML = '';
     searchContainer.append(...games);
   }
 }
@@ -28,9 +29,6 @@ const searchElement = createElement('input', {
       const searchContainer = document.querySelector('.gamelist-container');
 
       if (searchQuery === '') {
-        if (searchContainer) {
-          searchContainer.innerHTML = '';
-        }
         fireInitFetch();
       } else {
         const response = await fetchAPIFilter();
