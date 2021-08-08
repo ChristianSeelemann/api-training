@@ -20,7 +20,7 @@ body {
 
 .gamelist-container {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 1.5rem;
   padding: 0 5rem 4rem 5rem;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   background-color: var(--clr-bg);
